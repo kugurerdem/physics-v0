@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title> </title>
+	</head>
+
+	<style>
+		#left-content {
+			clear: left;
+			float: left;
+			width: 500px;
+			padding: 0.5em;
+			margin: 0;
+			display: inline;
+			cursor:auto;
+		}
+		
+		#right-content {
+			position: relative;
+			left: 5px;
+			top: 10px;
+			border: 1px solid;
+			padding: 10px; 
+			width: 250px;
+			overflow: auto;
+		}
+		
+		#down-content{
+			position: relative;
+			left: -508px;
+			top: 20px;
+			border: 1px solid;
+			padding: 10px; 
+			width: 480px;
+			overflow: auto;
+		}
+	
+		
+	</style>
+	
+	<div id="left-content" style="cursor:crosshair" > 
+		<canvas id="myCanvas" width="500" height="500" style="border:1px solid;"> </canvas>
+	</div>
+	<div id="right-content"> 
+		<p> General Physics Variables </p>
+		Gravity : <input id="grav-slider" type="range" min="0" max="1" step="0.01" value="0.02"/>
+		<text id="grav"> 0.02 </text> <br/>
+		
+		Mass of air : <input id="air-slider" type="range" min="0" max="1" step="0.1" value="0.2"/>
+		<text id="air"> 0.2 </text> <br/>
+
+		Elasticity : <input id="elasticity-slider" type="range" min="0" max="1" step="0.05" value="0.75"/>
+		<text id="elasticity"> 0.75 </text>  <br/> <br/> <hr/>
+		
+		Selected Ball's ID: <text id="selectedId"> No </text> <br/> <br/>
+		Mass : <text id = "massID"> 0 </text> 
+		Size : <text id = "sizeID"> 0 </text> <br/>  <br/>
+		<button onclick="removeBall()"> Remove Ball </button> <br/> <br/> <hr/>
+
+		New Ball's Properties <br/> <br/>
+		Size : <input id="size-slider" type="range" min="10" max="35" step="1" value="25"/>
+		<text id="size"> 25 </text> <br/>
+		Mass : <input id="mass-slider" type="range" min="1" max="35" step="0.5" value="1"/>
+		<text id="mass"> 1 </text> <br/> <br/>
+	
+		<button onclick="addBall()"> Add Ball </button> <br/> <br/> <hr/>
+		Made by Ugur Erdem Kucuk
+	</div>
+	<div id="down-content">
+	<button onclick="Reset()"> Reset </button>
+	<button onclick="Stop()"> Stop/Start </button>
+	
+	</div>
+
+	<body>
+		<script src="anonymous.js"></script>
+		<script src="events.js"></script>
+		<script src="physics.js"></script>
+	</body>
+</html>
