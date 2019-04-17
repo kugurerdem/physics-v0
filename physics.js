@@ -125,8 +125,6 @@ function loop(){
 			delete particles[i];
 			selected_particle = pickRandomProperty(particles);
 		}
-		total_momentum += (particles[i].mass * particles[i].speed);
-		console.log(total_momentum);
 
 	}
 
